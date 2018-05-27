@@ -1,16 +1,7 @@
 const seneca = require("seneca")();
+const account = require("./account");
 
-seneca.add({ role: "accountManagement", cmd: "register" }, (msg, respond) => {
-  respond(null, {
-    message: `registering ${msg.username}`
-  });
-});
-
-seneca.add({ role: "accountManagement", cmd: "login" }, (msg, respond) => {
-  respond(null, {
-    message: `logging in ${msg.username}`
-  });
-});
+seneca.use(account, { message: "Plugin added" });
 
 seneca.act(
   { cmd: "register", role: "accountManagement", username: "testuser" },
