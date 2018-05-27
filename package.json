@@ -1,0 +1,11 @@
+{
+  "name": "seneca-express",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Sam Zhao <zhao.shengjun@gmail.com> (https://samzhao.gitlab.io)",
+  "license": "MIT",
+  "dependencies": {
+    "express": "4.16.3",
+    "seneca": "3.5.0"
+  }
+}
